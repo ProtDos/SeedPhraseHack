@@ -39,7 +39,7 @@ while True:
             addr = w3.eth.account.from_mnemonic(phrase).address
 
             bal = w3.eth.get_balance(addr)
-            if int(bal) > 0:
+            if float(bal) > 0.0:
                 print("[+] Success:", phrase, ":", bal, ":", addr)
         except eth_utils.exceptions.ValidationError:
             pass
